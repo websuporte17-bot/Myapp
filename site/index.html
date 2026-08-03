@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DGNAV - Navegador WebView Avançado</title>
+    <style>
+      :root {
+        --bg: #07111f;
+        --panel: #0f1b2d;
+        --panel-2: #14253c;
+        --text: #f4f7fb;
+        --muted: #9facc4;
+        --accent: #4dd0ff;
+        --accent-2: #7d5cff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg), var(--panel));
+        color: var(--text);
+      }
+      .hero {
+        padding: 48px 20px 24px;
+        text-align: center;
+        background: radial-gradient(circle at top, rgba(77,208,255,0.2), transparent 60%);
+      }
+      .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+      .hero p { color: var(--muted); max-width: 760px; margin: 0 auto; line-height: 1.6; }
+      .cta {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 14px 22px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .container { max-width: 980px; margin: 0 auto; padding: 20px; }
+      .card {
+        background: rgba(15, 27, 45, 0.95);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 18px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      }
+      .features { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+      .feature { background: var(--panel-2); padding: 14px; border-radius: 12px; }
+      .feature h3 { margin-top: 0; }
+      .dev { color: var(--accent); font-weight: bold; }
+      .footer { text-align: center; color: var(--muted); padding: 24px 10px 40px; font-size: 0.95rem; }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <h1>DGNAV.apk</h1>
+      <p>
+        Navegador WebView nativo e avançado para testes de identidade, automação web, abas, scripts persistentes e controle de navegação com foco em QA e experimentos de ambiente web.
+      </p>
+      <a class="cta" href="dgnav.apk" download="dgnav.apk">Baixar DGNAV.apk</a>
+    </section>
+
+    <main class="container">
+      <section class="card">
+        <h2>Funcionalidades principais</h2>
+        <div class="features">
+          <div class="feature">
+            <h3>Abas e navegação</h3>
+            <p>Gerencie várias abas com troca rápida entre páginas e controle de contexto.</p>
+          </div>
+          <div class="feature">
+            <h3>Identidade e masking</h3>
+            <p>Aplicação de User-Agent, MAC sintético e limpeza profunda de sessão para testes de identidade.</p>
+          </div>
+          <div class="feature">
+            <h3>Ghost Script</h3>
+            <p>Injete scripts persistentes para simular comportamentos e validar fluxos web.</p>
+          </div>
+          <div class="feature">
+            <h3>Automação de ações</h3>
+            <p>Grave e replique cliques e inputs para testes de QA e automações simples.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Desenvolvedor</h2>
+        <p>Codigo fonte e evolução da aplicação mantidos por <span class="dev">@DUGOLPOFC</span>.</p>
+        <p>O botão acima sempre aponta para a versão mais recente do arquivo de instalação disponível nesta pasta.</p>
+      </section>
+    </main>
+
+    <div class="footer">
+      Atualização automática: basta substituir o arquivo <strong>dgnav.apk</strong> na pasta do site para que o download fique sempre atualizado.
+    </div>
+  </body>
+</html>

@@ -34,12 +34,29 @@ if [ -n "$APK_FOUND" ]; then
   exit 0
 fi
 
+ANDROID_SDK_DIR="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+
 if [ -f "$EXTRACT_DIR/gradlew" ] || find "$EXTRACT_DIR" -maxdepth 3 -name 'build.gradle' | grep -q .; then
   echo "Projeto Android detectado. Tentando compilar..."
+
+  if [ -n "$ANDROID_SDK_DIR" ] && [ ! -f "$EXTRACT_DIR/local.properties" ]; then
+    echo "ANDROID_HOME/ANDROID_SDK_ROOT detectado: $ANDROID_SDK_DIR"
+    echo "Criando local.properties no projeto para apontar para o SDK Android..."
+    printf 'sdk.dir=%s\n' "$ANDROID_SDK_DIR" > "$EXTRACT_DIR/local.properties"
+  fi
+
   if [ -f "$EXTRACT_DIR/gradlew" ]; then
-    (cd "$EXTRACT_DIR" && chmod +x gradlew && ./gradlew assembleDebug)
+    if ! (cd "$EXTRACT_DIR" && chmod +x gradlew && ./gradlew assembleDebug); then
+      echo "A compilação falhou. Verifique o SDK Android e o arquivo local.properties."
+      echo "Defina ANDROID_HOME ou ANDROID_SDK_ROOT, ou crie local.properties com sdk.dir."
+      exit 1
+    fi
   else
-    (cd "$EXTRACT_DIR" && gradle assembleDebug)
+    if ! (cd "$EXTRACT_DIR" && gradle assembleDebug); then
+      echo "A compilação falhou. Verifique o SDK Android e o arquivo local.properties."
+      echo "Defina ANDROID_HOME ou ANDROID_SDK_ROOT, ou crie local.properties com sdk.dir."
+      exit 1
+    fi
   fi
 
   if find "$EXTRACT_DIR" -type f -name '*.apk' | grep -q .; then

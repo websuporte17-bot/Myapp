@@ -1,0 +1,92 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.webviewbrowser"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/workspaces/Myapp/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/workspaces/Myapp/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:3:5-67
+11-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:4:5-79
+12-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:4:22-76
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:5:5-81
+13-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:5:22-78
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:6:5-80
+14-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:6:22-77
+15
+16    <permission
+16-->[androidx.core:core:1.9.0] /home/codespace/.gradle/caches/transforms-3/5622e59818fbfc87a158640f695b1935/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+17        android:name="com.example.webviewbrowser.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.9.0] /home/codespace/.gradle/caches/transforms-3/5622e59818fbfc87a158640f695b1935/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.9.0] /home/codespace/.gradle/caches/transforms-3/5622e59818fbfc87a158640f695b1935/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.example.webviewbrowser.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.9.0] /home/codespace/.gradle/caches/transforms-3/5622e59818fbfc87a158640f695b1935/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.9.0] /home/codespace/.gradle/caches/transforms-3/5622e59818fbfc87a158640f695b1935/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:8:5-21:19
+23        android:allowBackup="true"
+23-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:9:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.9.0] /home/codespace/.gradle/caches/transforms-3/5622e59818fbfc87a158640f695b1935/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:label="WebView QA"
+27-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:10:9-35
+28        android:supportsRtl="true"
+28-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:11:9-35
+29        android:theme="@style/Theme.AppCompat.NoActionBar" >
+29-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:12:9-59
+30        <activity
+30-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:13:9-20:20
+31            android:name="com.example.webviewbrowser.MainActivity"
+31-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:14:13-41
+32            android:exported="true" >
+32-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:15:13-36
+33            <intent-filter>
+33-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:16:13-19:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:17:17-69
+34-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:17:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:18:17-77
+36-->/workspaces/Myapp/app/src/main/AndroidManifest.xml:18:27-74
+37            </intent-filter>
+38        </activity>
+39
+40        <provider
+40-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/transforms-3/2cda140871f2e56d8caf87d6ec776951/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+41            android:name="androidx.startup.InitializationProvider"
+41-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/transforms-3/2cda140871f2e56d8caf87d6ec776951/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+42            android:authorities="com.example.webviewbrowser.androidx-startup"
+42-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/transforms-3/2cda140871f2e56d8caf87d6ec776951/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+43            android:exported="false" >
+43-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/transforms-3/2cda140871f2e56d8caf87d6ec776951/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+44            <meta-data
+44-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/transforms-3/2cda140871f2e56d8caf87d6ec776951/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+45                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+45-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/transforms-3/2cda140871f2e56d8caf87d6ec776951/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+46                android:value="androidx.startup" />
+46-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/transforms-3/2cda140871f2e56d8caf87d6ec776951/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+47            <meta-data
+47-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/codespace/.gradle/caches/transforms-3/37c96156cdcd02fb2237bba7e66a0236/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+48                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+48-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/codespace/.gradle/caches/transforms-3/37c96156cdcd02fb2237bba7e66a0236/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+49                android:value="androidx.startup" />
+49-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/codespace/.gradle/caches/transforms-3/37c96156cdcd02fb2237bba7e66a0236/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+50        </provider>
+51    </application>
+52
+53</manifest>

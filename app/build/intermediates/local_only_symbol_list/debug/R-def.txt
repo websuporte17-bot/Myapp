@@ -1,0 +1,17 @@
+R_DEF: Internal format may change without notice
+local
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+id goButton
+id identityButton
+id playButton
+id recordButton
+id settingsButton
+id tabsContainer
+id tabsScroll
+id urlInput
+id webViewContainer
+layout activity_main
+string app_name
+style Theme.AppCompat.NoActionBar
